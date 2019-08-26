@@ -1,7 +1,7 @@
 from time import sleep
 import pika
 
-from conf import logconf
+from .conf import logconf
 
 logger = logconf.Logger(__name__)
 
