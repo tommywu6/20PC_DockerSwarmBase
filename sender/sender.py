@@ -1,6 +1,9 @@
 from time import sleep
 import pika
 
+from conf import logconf
+
+logger = logconf.Logger(__name__)
 
 def run():
     credentials = pika.PlainCredentials(
@@ -31,5 +34,5 @@ def run():
             routing_key="demo",
             body=str(i)
         )
-        print(f"[x] send {i}")
+        logger.info(f"[x] send {i}")
         sleep(30)
