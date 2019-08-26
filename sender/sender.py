@@ -1,7 +1,4 @@
-import pickle
-
-import codecs
-
+from time import sleep
 import pika
 
 
@@ -28,12 +25,11 @@ def run():
         arguments=arguments
     )
 
-    state = channel.basic_publish(
-        exchange='',
-        routing_key="demo",
-        body=codecs.encode(
-            pickle.dumps(
-                {"data": "test"}
-            ), "base64"
-        ).decode()
-    )
+    for i in range(0, 100):
+        state = channel.basic_publish(
+            exchange='',
+            routing_key="demo",
+            body=str(i)
+        )
+        print(f"[x] send {i}")
+        sleep(30)
