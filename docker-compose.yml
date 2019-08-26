@@ -15,7 +15,7 @@ services:
       - RABBITMQ_NODENAME=rabbitmq
       - RABBITMQ_HIPE_COMPILE=1
     networks:
-      - keypo-dump-net
+      - demo-net
     logging:
         driver: "json-file"
         options:
@@ -39,7 +39,7 @@ services:
       - RABBITMQ_NODENAME=rabbitmq
       - RABBITMQ_HIPE_COMPILE=1
     networks:
-      - keypo-dump-net
+      - demo-net
     logging:
         driver: "json-file"
         options:
@@ -63,7 +63,7 @@ services:
       - RABBITMQ_NODENAME=rabbitmq
       - RABBITMQ_HIPE_COMPILE=1
     networks:
-      - keypo-dump-net
+      - demo-net
     logging:
         driver: "json-file"
         options:
