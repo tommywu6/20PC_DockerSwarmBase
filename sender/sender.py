@@ -1,9 +1,10 @@
 from time import sleep
 import pika
 
-from .conf import logconf
+from . import logconf
 
 logger = logconf.Logger(__name__)
+
 
 def run():
     credentials = pika.PlainCredentials(
