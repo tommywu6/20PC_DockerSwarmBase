@@ -16,7 +16,7 @@ services:
       replicas: 2
       placement:
         constraints:
-          - node.labels.node == three
+          - node.labels.rabbitmq3 == true
       update_config:
         parallelism: 3
         delay: 2s
